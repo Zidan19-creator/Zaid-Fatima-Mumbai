@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#edf2f7"><meta name="description" content="A blue and ivory wedding invitation. Join us for Nikah and Shaadi, a celebration of love and togetherness.">
+<title>Zaid &amp; Fatima · Nikah &amp; Shaadi</title>
+<link rel="preload" href="assets/invitation.webp" as="image">
+<link rel="preload" href="assets/cormorant-garamond.ttf" as="font" type="font/ttf" crossorigin>
+<style>
+@font-face{font-family:WeddingSerif;src:url('assets/cormorant-garamond.ttf') format('truetype');font-weight:300 700;font-style:normal;font-display:swap}@font-face{font-family:Invitation;src:url('assets/editorial-italic.otf')}@font-face{font-family:Arabic;src:url('assets/arabic.ttf')}
+:root{--blue:#416782;--ink:#304e67;--paper:#fcfaf6;--gold:#b49c74;--mist:#eaf0f5}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--mist);color:var(--ink);font-family:Georgia,'Times New Roman',serif}button,a{-webkit-tap-highlight-color:transparent}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible{outline:3px solid var(--blue);outline-offset:5px}.cover-shell{position:relative;min-height:100svh;display:flex;justify-content:center;isolation:isolate;overflow:hidden;background:#ecf1f6}.cover-shell:before{content:'';position:absolute;inset:-40px;background:linear-gradient(#edf2f7ad,#edf2f7ef),url('assets/invitation.webp') center/cover;filter:blur(22px);z-index:-1}.cover{position:relative;width:min(100vw,56.281svh);height:100svh;max-width:640px;min-height:550px;container-type:inline-size;overflow:hidden;box-shadow:0 0 95px #536d841e}.cover-art{position:absolute;inset:0;width:100%;height:100%;object-fit:fill}.invocation{position:absolute;top:17.5%;left:6%;width:88%;text-align:center;animation:appear 1.5s .25s both}.arabic{margin:0;color:#49667d;font-family:Arabic,serif;font-size:5cqw;line-height:1.8;white-space:nowrap}.translation{font-size:2.4cqw;letter-spacing:.08em;line-height:1.6;margin:1cqw 0;color:#708596}/* The title and subtitle share one flow; the entire cover opens the invitation. */
+.open-surface{position:absolute;inset:0;z-index:5;display:block;width:100%;height:100%;border:0;border-radius:0;padding:0;background:transparent;cursor:pointer;touch-action:manipulation}.open-surface:focus-visible{outline:2px solid var(--blue);outline-offset:-8px}.open-surface:disabled{cursor:wait}
+.intro-copy{position:absolute;top:27.5%;left:5%;width:90%;display:flex;flex-direction:column;align-items:center;text-align:center;animation:appear 1.5s .6s both}
+.celebration-line{font-family:Invitation,Georgia,serif;font-size:3.8cqw;line-height:1.5;margin:2.5cqw 0 0;color:#71879b}
+.intro-copy h1{font-family:WeddingSerif,Georgia,serif;font-weight:500;font-size:10.5cqw;line-height:1.25;letter-spacing:.025em;white-space:nowrap;margin:0;padding:0 2cqw;color:#365974}
+.intro-copy h1 .ampersand{color:#7995ac}
+.cover-caption{position:absolute;bottom:1.6%;left:0;width:100%;text-align:center;font-size:2.3cqw;color:#3b536ae8;letter-spacing:.22em;margin:0;text-transform:uppercase;display:none}.petal-layer{position:absolute;inset:0;pointer-events:none;overflow:hidden}.petal{position:absolute;width:7px;height:12px;border-radius:70% 10% 65% 30%;background:linear-gradient(120deg,#fff9efbd,#bad1e8ac);animation:fall linear infinite;opacity:0}.petal:nth-child(even){width:5px;height:9px;background:#d6e2edb8}.gate-transition{position:fixed;inset:0;display:flex;z-index:100;visibility:hidden;pointer-events:none;perspective:1400px}.gate{height:100%;width:50%;background:linear-gradient(90deg,#f9f6f1,#e5edf4);border:1px solid #adbdcd;position:relative;transform-origin:left;box-shadow:inset 0 0 80px #fff9}.gate:before{content:'';position:absolute;inset:8% 7%;border:1px solid #b59d714d;border-radius:45% 45% 0 0}.gate:after{content:'';position:absolute;inset:12% 12%;border:1px solid #9cb0c080;border-radius:45% 45% 0 0;background:repeating-linear-gradient(90deg,transparent 0,transparent 18px,#b1c2d238 19px,transparent 20px)}.gate.right{transform-origin:right;background:linear-gradient(-90deg,#f9f6f1,#e5edf4)}.gate-label{position:absolute;left:50%;top:43%;transform:translate(-50%,-50%);font-family:Invitation,serif;font-size:clamp(30px,6vw,65px);color:#456781;opacity:1;text-align:center;transition:opacity .4s;white-space:nowrap}.gate-transition.opening{visibility:visible}.opening .gate.left{animation:gate-left 2.2s .25s forwards}.opening .gate.right{animation:gate-right 2.2s .25s forwards}.opening .gate-label{animation:fade-out .6s .1s both}
+.celebrations{background:var(--paper);padding:80px 24px 40px;position:relative;overflow:hidden;min-height:100svh;text-align:center}.eyebrow{font-size:11px;letter-spacing:.27em;text-transform:uppercase;color:#6d879d;margin:0 0 20px}.section-title{font-family:Invitation,Georgia,serif;font-size:clamp(40px,6vw,66px);font-weight:400;margin:0 0 16px;line-height:1.15}.description{font-size:16px;line-height:1.8;color:#758493;max-width:400px;margin:0 auto 40px}.events{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));max-width:940px;gap:24px;margin:36px auto 0}.event{position:relative;padding:55px 30px 40px;background:linear-gradient(160deg,#eef3f7,#f8fafc);border:1px solid #bbcad87a;border-radius:200px 200px 8px 8px;min-height:350px}.event::before{content:'';position:absolute;inset:12px;border:1px solid #b39c7040;border-radius:190px 190px 5px 5px;pointer-events:none}.event .icon{display:block;width:54px;height:54px;margin:0 auto 20px;stroke:#708ea5;fill:none;stroke-width:1.3}.event h3{font-family:Invitation,Georgia,serif;font-size:42px;font-weight:400;margin:8px 0 22px}.day{letter-spacing:.16em;font-size:11px;text-transform:uppercase;color:#6a8192}.date{font-size:24px;margin:10px 0 22px}.event .note{font-size:14px;line-height:1.7;color:#778796;max-width:220px;margin:12px auto}.scratch-wrap{max-width:420px;margin:70px auto 55px}.scratch-wrap h3{font-weight:400;font-family:Invitation,serif;font-size:30px;margin:0 0 12px}.scratch-wrap>p{font-size:13px;color:#7d8c99;line-height:1.5}.scratch{height:170px;position:relative;background:#eaf0f5;border:1px solid #c4d1dc;border-radius:85px 85px 14px 14px;overflow:hidden;margin-top:20px;user-select:none}.secret{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:25px;font-family:Invitation,Georgia,serif;font-size:28px;line-height:1.3}.scratch canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;transition:opacity .8s}.reveal-link{border:0;background:none;color:#597b96;text-decoration:underline;text-underline-offset:4px;padding:12px;font-size:12px}.back{border:1px solid #a5b8c9;background:none;color:var(--blue);padding:13px 25px;border-radius:30px;font-size:13px}.footer{margin:48px 0 0;color:#8093a3;font-size:10px;letter-spacing:.23em;text-transform:uppercase}.ornament{font-size:32px;color:#b5c9d9;line-height:1;margin:40px 0 20px}
+@keyframes appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}@keyframes fall{0%{opacity:0;transform:translate3d(0,-20px,0) rotate(0)}10%{opacity:.55}90%{opacity:.4}100%{opacity:0;transform:translate3d(40px,105svh,0) rotate(230deg)}}@keyframes gate-left{to{transform:rotateY(-100deg);opacity:0}}@keyframes gate-right{to{transform:rotateY(100deg);opacity:0}}@keyframes fade-out{to{opacity:0}}
+@media(min-width:1000px){.cover-shell:after{content:'';position:absolute;inset:35px;border:1px solid #a8bed240;z-index:-1;border-radius:6px}}@media(max-width:580px){.events{grid-template-columns:1fr;max-width:350px}.event{min-height:310px;padding:42px 24px 30px}.celebrations{padding-top:65px}.description{font-size:15px}}@media(max-height:550px){.cover-shell{min-height:550px}.cover{height:550px;width:min(100vw,310px)}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.petal-layer{display:none}.gate-transition{display:none}}
+
+/* Ceremony scenes: full-screen mobile artwork with real, selectable event details. */
+.celebrations{padding:0;background:#fcfaf6;overflow:clip}
+.event-scenes{container-type:inline-size;max-width:600px;margin:0 auto;box-shadow:0 0 90px #526e8720}
+.ceremony-scene{position:relative;width:100%;height:auto;aspect-ratio:941/1672;overflow:hidden;container-type:inline-size;background:#fcfaf6;isolation:isolate}
+.scene-art{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:-1}
+.scene-content{position:absolute;top:13%;left:16%;width:68%;text-align:center;opacity:1;transform:none;z-index:2}
+.shaadi-scene .scene-content{top:18.5%}
+.scene-title{font-family:Invitation,Georgia,serif;font-weight:400;font-size:11.8cqw;line-height:1.12;margin:0;color:#3c5e78;letter-spacing:0}
+.scene-date{display:flex;justify-content:center;align-items:center;gap:3cqw;margin:1.8cqw auto 1.8cqw;color:#53738d}
+.scene-date:before,.scene-date:after{content:'';height:1px;flex:1;max-width:11cqw;background:#c2aa7b66}
+.scene-day{font-family:WeddingSerif,Georgia,serif;font-size:6.8cqw;line-height:1}
+.scene-month{font-size:2.6cqw;letter-spacing:.16em;text-transform:uppercase;line-height:1.25;text-align:left}.scene-event-time{display:block;font-size:2.5cqw;line-height:1.25;letter-spacing:.07em;color:#71889a}
+.scene-venue{font-family:WeddingSerif,Georgia,serif;font-size:4.1cqw;line-height:1.3;margin:0 0 .7cqw;font-weight:500;color:#466681}
+.scene-location{font-size:3cqw;letter-spacing:.13em;margin:0;color:#7b8a98;line-height:1.5}
+.scene-sparkles{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:1}
+.scene-sparkles span{position:absolute;width:3px;height:3px;background:#d5b780;border-radius:50%;box-shadow:0 0 6px #f5dfaad9;animation:wedding-glimmer 5s ease-in-out infinite;opacity:0}
+.scene-sparkles span:nth-child(even){background:#d4e3f2;box-shadow:0 0 8px #d3e2f6}
+.scene-enhanced .ceremony-scene .scene-content{opacity:0;transform:translateY(6px);transition:opacity 1.2s .15s,transform 1.2s .15s}
+.scene-enhanced .ceremony-scene.in-view .scene-content{opacity:1;transform:translateY(0)}
+
+.celebration-closing{padding:30px 24px 45px;background:linear-gradient(#fcfaf6,#edf2f7 55%,#fcfaf6);max-width:600px;margin:0 auto}
+.celebration-closing .scratch-wrap{margin:35px auto 45px}
+.celebration-closing .footer{margin-top:22px}
+@keyframes wedding-glimmer{0%,100%{opacity:0;transform:scale(.6)}50%{opacity:.65;transform:scale(1.3)}}
+
+@media(prefers-reduced-motion:reduce){.scene-enhanced .ceremony-scene .scene-content{opacity:1;transform:none}.scene-enhanced .ceremony-scene.in-view .scene-art{transform:none}.scene-sparkles{display:none}}
+
+
+/* Dissolve the artwork into one continuous ivory scroll, without message cards. */
+.ceremony-scene:after{content:'';position:absolute;inset:0;pointer-events:none;z-index:0;background:linear-gradient(to bottom,transparent 88%,#fcfaf6 100%)}
+.shaadi-scene:after{background:linear-gradient(to bottom,#fcfaf6 0%,transparent 7%,transparent 90%,#fcfaf6 100%)}
+.scene-transition{display:flex;align-items:center;justify-content:center;gap:14px;height:12cqw;min-height:44px;max-height:72px;background:#fcfaf6;color:#b0a17e}
+.scene-transition span{height:1px;width:42px;background:linear-gradient(90deg,transparent,#c8bc9c)}
+.scene-transition span:last-child{transform:rotate(180deg)}
+.scene-transition svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:.8}
+
+
+/* Romantic lines occupy the clear paper area, never the painted architecture. */
+.scene-love{font-family:Invitation,Georgia,serif;font-size:3.5cqw;line-height:1.45;margin:2.1cqw 0 1.2cqw;color:#71889a}
+.scene-love span{display:block;white-space:nowrap}
+.scene-love em{font-style:inherit;color:#8a795b;background:linear-gradient(transparent 76%,#d4bb852b 76%)}
+.scene-enhanced .ceremony-scene .scene-love span{opacity:0;transform:translateY(4px);transition:opacity 1.25s .4s,transform 1.25s .4s}
+.scene-enhanced .ceremony-scene .scene-love span:nth-child(2){transition-delay:.8s}
+.scene-enhanced .ceremony-scene.in-view .scene-love span{opacity:1;transform:translateY(0)}
+/* Feather the actual opening-to-Nikah join as well as the ceremony joins. */
+.cover-shell{background:#fcfaf6}
+.cover-shell:before{mask-image:linear-gradient(#000 0%,#000 86%,transparent 100%);-webkit-mask-image:linear-gradient(#000 0%,#000 86%,transparent 100%)}
+.cover:after{content:'';position:absolute;inset:90% 0 0;pointer-events:none;background:linear-gradient(transparent,#fcfaf6);z-index:3}
+.ceremony-scene:after{background:linear-gradient(to bottom,#fcfaf6 0%,transparent 7%,transparent 88%,#fcfaf6 100%)}
+@media(prefers-reduced-motion:reduce){.scene-enhanced .ceremony-scene .scene-love span{opacity:1;transform:none}}
+
+
+/* A dedicated final invitation page: flowers stay outside the text flow. */
+.family-next{display:inline-flex;align-items:center;gap:12px;min-height:44px;padding:10px 8px;color:#647f95;font-size:12px;line-height:1.5;text-decoration:none}
+.credits-page{position:relative;container-type:inline-size;isolation:isolate;max-width:600px;min-height:100svh;margin:0 auto;padding:170px 28px 140px;background:#fcfaf6;display:flex;justify-content:center;align-items:center;overflow:hidden}
+.credits-page:before{content:'';position:absolute;inset:8% 7%;border:1px solid #c6b89566;border-radius:220px 220px 12px 12px;pointer-events:none;z-index:-1}
+.credits-flowers{position:absolute;left:0;right:0;background-image:url('assets/invitation.webp');background-size:100% auto;background-repeat:no-repeat;pointer-events:none;z-index:-1}
+.flowers-top{top:0;height:29cqw;background-position:center top;mask-image:linear-gradient(#000 45%,transparent);-webkit-mask-image:linear-gradient(#000 45%,transparent)}
+.flowers-bottom{bottom:0;height:22cqw;background-position:center bottom;mask-image:linear-gradient(transparent,#000 45%);-webkit-mask-image:linear-gradient(transparent,#000 45%)}
+.credits-content{width:100%;max-width:440px;text-align:center;color:#4f6f87}
+.credits-crescent{width:30px;height:30px;fill:none;stroke:#aa9570;stroke-width:1;display:block;margin:0 auto 20px}
+.credits-kicker{font-size:10px;letter-spacing:.19em;text-transform:uppercase;margin:0 0 12px;color:#8a9caa;line-height:1.6}
+.credits-heading{font-family:Invitation,Georgia,serif;font-size:clamp(34px,10cqw,54px);font-weight:400;line-height:1.15;margin:0 0 15px;color:#3f617b}
+.credits-intro{font-size:clamp(13px,3.4cqw,16px);line-height:1.75;color:#83929e;margin:0 0 27px}
+.credits-label{font-size:10px;line-height:1.5;letter-spacing:.2em;text-transform:uppercase;color:#92a1ad;margin:0 0 10px}
+.credits-hosts{font-family:WeddingSerif,Georgia,serif;font-size:clamp(25px,6.6cqw,37px);font-weight:500;line-height:1.22;margin:0;color:#496980}
+.credits-hosts span{display:block}.credits-hosts .credits-amp{font-family:Invitation,Georgia,serif;font-size:20px;line-height:1.5;color:#b2a07c;margin:3px 0}
+.credits-request{font-family:Invitation,Georgia,serif;font-size:clamp(13px,3.5cqw,17px);line-height:1.7;margin:18px 0 0;color:#8c9aa5}
+.credits-rule{display:flex;align-items:center;justify-content:center;gap:12px;color:#bdad8b;margin:24px auto;max-width:165px;font-size:16px}.credits-rule span{flex:1;height:1px;background:#cbbf9d6b}
+.credits-designer{font-size:clamp(13px,3.5cqw,17px);line-height:1.6;margin:0;color:#5d788d}
+.credits-back{font-size:11px;margin:25px auto 0;min-height:44px;padding:10px 21px;border-color:#b8c7d470}
+.credits-signoff{font-family:Invitation,Georgia,serif;font-size:18px;color:#a1b1bf;margin:24px 0 0}
+@media(max-width:360px){.credits-page{padding:150px 28px 110px}.credits-request{font-size:12px}}
+
+</style>
+</head>
+<body>
+<main>
+<section class="cover-shell" aria-label="Wedding invitation opening page" id="invitation">
+ <div class="cover">
+  <img class="cover-art" src="assets/invitation.webp" alt="An illustrated Muslim bride and groom in powder blue, facing each other beside an ivory floral arch. A pale mosque and blue and ivory roses frame the invitation." width="941" height="1672" fetchpriority="high">
+  <div class="invocation"><p class="arabic" lang="ar" dir="rtl">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p><p class="translation">In the name of Allah, the Most Merciful</p></div>
+  <div class="intro-copy">
+   <h1>Zaid <span class="ampersand">&amp;</span> Fatima</h1>
+   <p class="celebration-line">A Celebration of Love</p>
+  </div>
+  <div class="petal-layer" id="petals" aria-hidden="true"></div>
+ </div>
+ <button class="open-surface" id="open-surface" aria-label="Open Zaid and Fatima’s wedding invitation" aria-controls="celebrations"></button>
+</section>
+<section class="celebrations" id="celebrations" aria-labelledby="celebration-title" hidden>
+ <div class="event-scenes">
+  <article class="ceremony-scene nikah-scene" id="nikah" aria-labelledby="celebration-title">
+   <img class="scene-art" src="assets/nikah-scene.webp" alt="Intricate ivory and blue arches, roses, lanterns and an illustrated mosque backdrop." width="941" height="1672" loading="eager" fetchpriority="low">
+   <div class="scene-content">
+    <h2 class="scene-title" id="celebration-title" tabindex="-1">Nikah</h2>
+    <p class="scene-love"><span>Duaon mein <em>tum</em>,</span><span>taqdeer mein <em>hum</em>.</span></p>
+    <div class="scene-date"><span class="scene-day">24</span><span class="scene-month">December<span class="scene-event-time">6:00 PM</span></span></div>
+    <p class="scene-venue">Hotel Sea Princess</p><p class="scene-location">Juhu</p>
+   </div>
+   <div class="scene-sparkles" aria-hidden="true"></div>
+  </article>
+  <div class="scene-transition" aria-hidden="true"><span></span><svg viewBox="0 0 30 30"><path d="M15 5c-5 5-5 10 0 15 5-5 5-10 0-15Zm0 15C6 21 4 16 5 11c6 0 10 4 10 9Zm0 0c9 1 11-4 10-9-6 0-10 4-10 9Z"/></svg><span></span></div>
+  <article class="ceremony-scene shaadi-scene" id="shaadi" aria-labelledby="shaadi-title">
+   <img class="scene-art" src="assets/shaadi-scene.webp" alt="A blue and ivory floral reception pavilion, chandeliers, candlelight and a sea view." width="941" height="1672" loading="lazy">
+   <div class="scene-content">
+    <h2 class="scene-title" id="shaadi-title">Shaadi</h2>
+    <p class="scene-love"><span>Aaj ki shaam, <em>mohabbat</em> ke naam.</span></p>
+    <div class="scene-date"><span class="scene-day">25</span><span class="scene-month">December<span class="scene-event-time">7:00 PM</span></span></div>
+    <p class="scene-venue">Hotel Sea Princess</p><p class="scene-location">Juhu</p>
+   </div>
+   <div class="scene-sparkles" aria-hidden="true"></div>
+  </article>
+ </div>
+ <div class="celebration-closing" id="our-message">
+ <div class="scratch-wrap"><h3>A little love, waiting to be revealed</h3><p>Gently swipe the blue panel to reveal our message.</p><div class="scratch" id="scratch"><div class="secret">Your presence will make<br>our celebration complete.</div><canvas id="scratch-canvas" aria-label="Scratch to reveal our message"></canvas></div><button class="reveal-link" id="reveal">Reveal the message</button></div>
+ <a class="family-next" href="#with-love">With love, from our family <span aria-hidden="true">↓</span></a>
+ </div>
+ <section class="credits-page" id="with-love" aria-labelledby="credits-title">
+  <div class="credits-flowers flowers-top" aria-hidden="true"></div>
+  <div class="credits-flowers flowers-bottom" aria-hidden="true"></div>
+  <div class="credits-content">
+   <svg class="credits-crescent" viewBox="0 0 42 42" aria-hidden="true"><path d="M26 5A16 16 0 1 0 36 28 15 15 0 0 1 26 5Z"/><path d="m32 9 1.8 4.5 4.7.3-3.7 3 1.2 4.5-4-2.5-4 2.5 1.1-4.5-3.7-3 4.8-.3Z"/></svg>
+   <p class="credits-kicker">With love &amp; warm wishes</p>
+   <h2 id="credits-title" class="credits-heading">You're invited.</h2>
+   <p class="credits-intro">To celebrate love, family<br>and a beautiful new beginning.</p>
+   <p class="credits-label">Invited by</p>
+   <p class="credits-hosts"><span>Furkan Memon</span><span class="credits-amp">&amp;</span><span>Masrat Memon</span></p>
+   <p class="credits-request">Request the pleasure of your company.</p>
+   <div class="credits-rule" aria-hidden="true"><span></span>✧<span></span></div>
+   <p class="credits-label">Designed &amp; created by</p>
+   <p class="credits-designer">Zidan s/o Furkan Memon</p>
+   <button class="back credits-back" id="back">Back to the invitation</button>
+   <p class="credits-signoff">Zaid &amp; Fatima</p>
+  </div>
+ </section>
+</section>
+</main>
+<div class="gate-transition" id="gates" aria-hidden="true"><div class="gate left"></div><div class="gate right"></div><div class="gate-label">Let the celebrations begin</div></div>
+<script>
+(()=>{
+ const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const openSurface=document.getElementById('open-surface'), celebrations=document.getElementById('celebrations'), gates=document.getElementById('gates');
+ let opening=false,scratchReady=false,scenesReady=false;
+ function open(){if(opening)return;opening=true;openSurface.disabled=true;gates.classList.add('opening');setTimeout(()=>{celebrations.hidden=false;if(!scenesReady){initScenes();scenesReady=true}celebrations.scrollIntoView({behavior:'instant',block:'start'});document.getElementById('celebration-title').focus({preventScroll:true});if(!scratchReady){initScratch();scratchReady=true}},reduced?0:350);setTimeout(()=>{gates.classList.remove('opening');openSurface.disabled=false;opening=false},reduced?20:2550)}
+ openSurface.addEventListener('click',open);
+ document.getElementById('back').addEventListener('click',()=>{document.getElementById('invitation').scrollIntoView({behavior:reduced?'instant':'smooth'});openSurface.focus({preventScroll:true})});
+ if(!reduced){const holder=document.getElementById('petals');for(let i=0;i<14;i++){const petal=document.createElement('span');petal.className='petal';petal.style.left=(i*7.3%100)+'%';petal.style.top='-20px';petal.style.animationDuration=(12+i%5)+'s';petal.style.animationDelay=(-(i*1.9))+'s';holder.appendChild(petal)}}
+
+ function initScenes(){
+  const scenes=[...document.querySelectorAll('.ceremony-scene')];
+  if(!reduced && 'IntersectionObserver' in window){
+   celebrations.classList.add('scene-enhanced');
+   const observer=new IntersectionObserver(entries=>{for(const entry of entries){if(entry.isIntersecting)entry.target.classList.add('in-view')}},{threshold:.12});
+   scenes.forEach(scene=>observer.observe(scene));
+  }
+  scenes.forEach(scene=>{if(reduced)return;const layer=scene.querySelector('.scene-sparkles');for(let i=0;i<14;i++){const dot=document.createElement('span');dot.style.left=(8+(i*19)%84)+'%';dot.style.top=(12+(i*13)%76)+'%';dot.style.animationDelay=(-(i*.7))+'s';layer.appendChild(dot)}});
+ }
+
+ function initScratch(){const canvas=document.getElementById('scratch-canvas'),ctx=canvas.getContext('2d'),box=document.getElementById('scratch');let active=false,moves=0,complete=false;const scale=Math.min(window.devicePixelRatio||1,2);let w=0,h=0;
+ function paint(){if(complete)return;w=box.clientWidth;h=box.clientHeight;canvas.width=w*scale;canvas.height=h*scale;ctx.setTransform(scale,0,0,scale,0,0);ctx.globalCompositeOperation='source-over';const gradient=ctx.createLinearGradient(0,0,w,h);gradient.addColorStop(0,'#b6cbdc');gradient.addColorStop(1,'#dbe6ef');ctx.fillStyle=gradient;ctx.fillRect(0,0,w,h);ctx.strokeStyle='#ffffff55';for(let x=-h;x<w;x+=25){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x+h,h);ctx.stroke()}ctx.fillStyle='#4c6b85';ctx.font='italic 26px Georgia';ctx.textAlign='center';ctx.fillText('A little love for you',w/2,h/2);ctx.font='11px Georgia';ctx.fillText('SWIPE TO REVEAL',w/2,h/2+27)}
+ function reveal(){complete=true;active=false;canvas.style.opacity='0';canvas.style.pointerEvents='none';document.getElementById('reveal').textContent='Message revealed';document.getElementById('reveal').disabled=true}
+ function erase(e){if(!active||complete)return;const bounds=canvas.getBoundingClientRect();ctx.globalCompositeOperation='destination-out';ctx.beginPath();ctx.arc(e.clientX-bounds.left,e.clientY-bounds.top,25,0,Math.PI*2);ctx.fill();moves++;if(moves%20===0){const pixels=ctx.getImageData(0,0,canvas.width,canvas.height).data;let cleared=0,samples=0;for(let i=3;i<pixels.length;i+=64){samples++;if(pixels[i]<20)cleared++}if(cleared/samples>.34)reveal()}}
+ canvas.addEventListener('pointerdown',e=>{active=true;canvas.setPointerCapture(e.pointerId);erase(e)});canvas.addEventListener('pointermove',erase);canvas.addEventListener('pointerup',()=>active=false);canvas.addEventListener('pointercancel',()=>active=false);document.getElementById('reveal').addEventListener('click',reveal);new ResizeObserver(paint).observe(box);paint()}
+})();
+</script>
+</body>
+</html>
