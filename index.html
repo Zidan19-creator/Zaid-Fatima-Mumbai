@@ -131,8 +131,8 @@
 <section class="celebrations" id="celebrations" aria-labelledby="countdown-title" hidden>
  <section class="countdown-page" aria-labelledby="countdown-title">
   <img class="monogram-art" src="assets/meet-the-memons-blue.webp" alt="ZF monogram and Meet The Memons, framed by flowers, travel details and Mumbai landmarks with an illustrated couple." width="1142" height="1378" loading="eager" fetchpriority="low">
-  <h2 class="countdown-heading" id="countdown-title" tabindex="-1">Counting down to forever</h2>
-  <div class="countdown-clock" aria-label="Time until our next wedding celebration" aria-live="off">
+  <h2 class="countdown-heading" id="countdown-title" tabindex="-1">Counting down to Shaadi</h2>
+  <div class="countdown-clock" aria-label="Time until Shaadi on 24 December 2026 at 7 PM Mumbai time" aria-live="off">
    <div class="countdown-unit"><span class="countdown-number" id="countdown-days">00</span><span class="countdown-label">Days</span></div>
    <div class="countdown-unit"><span class="countdown-number" id="countdown-hours">00</span><span class="countdown-label">Hours</span></div>
    <div class="countdown-unit"><span class="countdown-number" id="countdown-minutes">00</span><span class="countdown-label">Minutes</span></div>
@@ -145,7 +145,7 @@
    <div class="scene-content">
     <h2 class="scene-title" id="celebration-title" tabindex="-1">Nikah</h2>
     <p class="scene-love"><span>Duaon mein <em>tum</em>,</span><span>taqdeer mein <em>hum</em>.</span></p>
-    <div class="scene-date"><span class="scene-day">24</span><span class="scene-month">December<span class="scene-event-time">6:00 PM</span></span></div>
+    <div class="scene-date"><span class="scene-day">24</span><span class="scene-month">December<span class="scene-event-time">After Zuhr</span></span></div>
     <p class="scene-venue">Hotel Sea Princess</p><p class="scene-location">Juhu</p>
    </div>
    <div class="scene-sparkles" aria-hidden="true"></div>
@@ -156,7 +156,7 @@
    <div class="scene-content">
     <h2 class="scene-title" id="shaadi-title">Shaadi</h2>
     <p class="scene-love"><span>Aaj ki shaam, <em>mohabbat</em> ke naam.</span></p>
-    <div class="scene-date"><span class="scene-day">25</span><span class="scene-month">December<span class="scene-event-time">7:00 PM</span></span></div>
+    <div class="scene-date"><span class="scene-day">24</span><span class="scene-month">December<span class="scene-event-time">7:00 PM</span></span></div>
     <p class="scene-venue">Hotel Sea Princess</p><p class="scene-location">Juhu</p>
    </div>
    <div class="scene-sparkles" aria-hidden="true"></div>
@@ -223,8 +223,8 @@
 
 
  const weddingEvents=[
-  {name:'Nikah',at:Date.parse('2026-12-24T18:00:00+05:30')},
-  {name:'Shaadi',at:Date.parse('2026-12-25T19:00:00+05:30')}
+  // Nikah is after Zuhr; only Shaadi has a confirmed clock time.
+  {name:'Shaadi',at:Date.parse('2026-12-24T19:00:00+05:30')}
  ];
  function countdownState(now,events){
   const next=events.find(event=>event.at>now);
