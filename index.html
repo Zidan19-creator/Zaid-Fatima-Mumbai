@@ -95,15 +95,13 @@
 
 
 /* A separate monogram-and-countdown chapter keeps clocks away from the ceremony art. */
-.countdown-page{position:relative;container-type:inline-size;max-width:600px;min-height:100svh;margin:0 auto;padding:22px 18px 42px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:#fff}
-.monogram-art{display:block;width:100%;height:auto;max-width:520px;margin:0 auto 5px}
-.countdown-heading{font-family:WeddingSerif,Georgia,serif;font-weight:500;font-size:clamp(26px,7cqw,40px);line-height:1.2;color:#4c6d87;margin:0 0 12px}
-.countdown-caption{font-size:11px;line-height:1.65;color:#8c9ba6;letter-spacing:.035em;max-width:340px;margin:0 auto 20px}
+.countdown-page{position:relative;container-type:inline-size;max-width:600px;min-height:100svh;margin:0 auto;padding:22px 18px 42px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:radial-gradient(ellipse at 50% 30%,#dce8f280,transparent 68%),linear-gradient(180deg,#fcfaf6 0%,#f0f5f8 54%,#fcfaf6 100%)}
+.monogram-art{display:block;width:100%;height:auto;max-width:520px;margin:0 auto 14px}
+.countdown-heading{font-family:WeddingSerif,Georgia,serif;font-weight:500;font-size:clamp(26px,7cqw,40px);line-height:1.2;color:#4c6d87;margin:0 0 22px}
 .countdown-clock{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;width:100%;max-width:430px}
 .countdown-unit{padding:12px 4px 11px;background:linear-gradient(145deg,#f8fafc,#eef3f7);border:1px solid #b9cbd957;border-radius:40px 40px 8px 8px;min-width:0}
 .countdown-number{display:block;font-family:WeddingSerif,Georgia,serif;font-size:clamp(28px,8cqw,44px);font-weight:500;line-height:1.05;color:#567993;font-variant-numeric:tabular-nums}
 .countdown-label{display:block;font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:#8d9faa;margin-top:7px}
-.countdown-zone{font-size:10px;color:#a1afb7;line-height:1.5;margin:16px 0 0}
 .countdown-page:after{content:'';position:absolute;left:0;right:0;bottom:0;height:30px;background:linear-gradient(transparent,#fcfaf6);pointer-events:none}
 
 </style>
@@ -124,16 +122,14 @@
 </section>
 <section class="celebrations" id="celebrations" aria-labelledby="countdown-title" hidden>
  <section class="countdown-page" aria-labelledby="countdown-title">
-  <img class="monogram-art" src="assets/meet-the-memons.webp" alt="ZF monogram and MeetTheMemons, framed by flowers, travel details and Mumbai landmarks with an illustrated couple." width="1326" height="1600" loading="eager" fetchpriority="low">
+  <img class="monogram-art" src="assets/meet-the-memons-blue.webp" alt="ZF monogram and MeetTheMemons, framed by flowers, travel details and Mumbai landmarks with an illustrated couple." width="1142" height="1378" loading="eager" fetchpriority="low">
   <h2 class="countdown-heading" id="countdown-title" tabindex="-1">Counting down to forever</h2>
-  <p class="countdown-caption" id="countdown-caption">Until our Nikah · 24 December 2026 · 6:00 PM</p>
   <div class="countdown-clock" aria-label="Time until our next wedding celebration" aria-live="off">
    <div class="countdown-unit"><span class="countdown-number" id="countdown-days">00</span><span class="countdown-label">Days</span></div>
    <div class="countdown-unit"><span class="countdown-number" id="countdown-hours">00</span><span class="countdown-label">Hours</span></div>
    <div class="countdown-unit"><span class="countdown-number" id="countdown-minutes">00</span><span class="countdown-label">Minutes</span></div>
    <div class="countdown-unit"><span class="countdown-number" id="countdown-seconds">00</span><span class="countdown-label">Seconds</span></div>
   </div>
-  <p class="countdown-zone">All celebration times are in Mumbai (IST).</p>
  </section>
  <div class="event-scenes">
   <article class="ceremony-scene nikah-scene" id="nikah" aria-labelledby="celebration-title">
@@ -195,8 +191,8 @@
 
 
  const weddingEvents=[
-  {name:'Nikah',at:Date.parse('2026-12-24T18:00:00+05:30'),label:'Until our Nikah · 24 December 2026 · 6:00 PM'},
-  {name:'Shaadi',at:Date.parse('2026-12-25T19:00:00+05:30'),label:'Until our Shaadi · 25 December 2026 · 7:00 PM'}
+  {name:'Nikah',at:Date.parse('2026-12-24T18:00:00+05:30')},
+  {name:'Shaadi',at:Date.parse('2026-12-25T19:00:00+05:30')}
  ];
  function countdownState(now,events){
   const next=events.find(event=>event.at>now);
@@ -206,9 +202,6 @@
  function updateCountdown(){
   const state=countdownState(Date.now(),weddingEvents);
   for(const unit of ['days','hours','minutes','seconds']){const el=document.getElementById('countdown-'+unit),value=String(state[unit]).padStart(2,'0');if(el.textContent!==value)el.textContent=value}
-  const caption=document.getElementById('countdown-caption');
-  const label=state.next?state.next.label:'Our forever has begun. Celebrating Zaid & Fatima.';
-  if(caption.textContent!==label)caption.textContent=label;
  }
  updateCountdown();
  setInterval(updateCountdown,1000);
@@ -233,4 +226,3 @@
 </script>
 </body>
 </html>
-
