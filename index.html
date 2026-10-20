@@ -109,6 +109,21 @@
 
 .music-toggle{position:fixed;right:max(14px,env(safe-area-inset-right));bottom:max(14px,env(safe-area-inset-bottom));z-index:20;width:44px;height:44px;display:grid;place-items:center;padding:0;border:1px solid #b6c7d6;border-radius:50%;background:#fcfaf6ed;color:#52758e;box-shadow:0 3px 15px #41678218}
 .music-toggle[hidden]{display:none}.music-toggle svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}.music-toggle .music-slash{display:none}.music-toggle[aria-pressed="false"] .music-slash{display:block}
+
+/* Venue chapter: a softly washed hotel photograph behind flowing text. */
+.venue-page{position:relative;isolation:isolate;max-width:600px;min-height:560px;margin:0 auto;padding:80px 32px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#fcfaf6;text-align:center}
+.venue-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:63% center;opacity:.36;z-index:-3}
+.venue-page:before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,#fcfaf6 0%,#fcfaf650 18%,#fcfaf6b8 48%,#edf2f7c9 78%,#fcfaf6 100%);z-index:-2}
+.venue-page:after{content:'';position:absolute;inset:35px 20px;border:1px solid #af9b735c;border-radius:180px 180px 12px 12px;pointer-events:none;z-index:-1}
+.venue-content{width:100%;max-width:400px;padding:18px 0}
+.venue-kicker{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:#617b90;margin:0 0 16px}
+.venue-heading{font-family:WeddingSerif,Georgia,serif;font-weight:500;font-size:clamp(34px,8vw,48px);line-height:1.12;color:#365974;margin:0 0 18px}
+.venue-address{font-style:normal;font-size:14px;line-height:1.8;color:#4f687c;margin:0}
+.venue-flourish{display:block;color:#ac946b;font-size:24px;margin:22px 0;line-height:1}
+.venue-map{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:13px 24px;border:1px solid #91aabd;border-radius:28px;background:#fcfaf6ed;color:#416782;text-decoration:none;font-size:13px;line-height:1.4;transition:background .25s,box-shadow .25s}
+.venue-map:hover{background:#eaf0f5;box-shadow:0 3px 14px #41678218}.venue-map svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.5}
+@media(max-width:360px){.venue-page{padding:65px 28px;min-height:520px}.venue-address{font-size:13px}}
+
 </style>
 </head>
 <body>
@@ -162,6 +177,17 @@
    <div class="scene-sparkles" aria-hidden="true"></div>
   </article>
  </div>
+ <section class="venue-page" id="venue" aria-labelledby="venue-title">
+  <!-- Hotel photograph: https://seaprincess.com/about-us/ -->
+  <img class="venue-photo" src="assets/hotel-sea-princess.webp" alt="" width="1920" height="1280" loading="lazy">
+  <div class="venue-content">
+   <p class="venue-kicker">The Venue</p>
+   <h2 class="venue-heading" id="venue-title">Hotel Sea Princess</h2>
+   <address class="venue-address">Juhu Tara Road, Juhu Beach<br>Mumbai, Maharashtra 400049</address>
+   <span class="venue-flourish" aria-hidden="true">✧</span>
+   <a class="venue-map" href="https://www.google.com/maps/search/?api=1&amp;query=Hotel%20Sea%20Princess%2C%20Juhu%20Tara%20Road%2C%20Mumbai%20400049" target="_blank" rel="noopener noreferrer" aria-label="View Hotel Sea Princess location in Google Maps (opens in a new tab)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>View Location</a>
+  </div>
+ </section>
  <div class="celebration-closing" id="our-message">
  <div class="scratch-wrap"><h3>A little love, waiting to be revealed</h3><p>Gently swipe the blue panel to reveal our message.</p><div class="scratch" id="scratch"><div class="secret">Your presence will make<br>our celebration complete.</div><canvas id="scratch-canvas" aria-label="Scratch to reveal our message"></canvas></div><button class="reveal-link" id="reveal">Reveal the message</button></div>
  <a class="family-next" href="#with-love">With love, from our family <span aria-hidden="true">↓</span></a>
